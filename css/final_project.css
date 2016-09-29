@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  background-color: #585a67; }
+
+body {
+  position: relative;
+  padding-bottom: 10vw;
+  min-height: 100vh; }
+
+nav {
+  position: fixed;
+  left: 50%;
+  top: 0.3vw;
+  transform: translate(-50%, 0);
+  z-index: 10; }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0;
+    width: 100%; }
+    nav ul li {
+      display: inline; }
+      nav ul li a {
+        text-decoration: none;
+        color: #b99f62;
+        background-color: #1a2127;
+        padding: 0.5vw 1.5vw;
+        margin-right: -0.1vw;
+        font-size: 1.5vw;
+        border-bottom: 0.2vw solid #1a2127;
+        transition: border 1s, color 6s, background-color 5s; }
+      nav ul li a:hover {
+        border-bottom: 0.2vw solid rgba(185, 159, 98, 0.5);
+        background-color: rgba(26, 33, 39, 0.5);
+        color: white; }
+    nav ul li:first-of-type a {
+      border-bottom-left-radius: 0.7vw; }
+    nav ul li:last-of-type a {
+      border-bottom-right-radius: 0.7vw; }
+
+.hero {
+  width: 100%;
+  height: 90vh;
+  margin-bottom: 5vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -1; }
+
+.splashText1, .splashText2 {
+  font-family: "krona one", sans-serif;
+  color: #D4AF37;
+  border: 1vw solid #b99f62;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 6vw 2.5vw black;
+  padding: 0 4vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0; }
+
+.splashText1 {
+  top: 25%;
+  font-size: 5vw;
+  width: 65%; }
+
+.splashText2 {
+  top: 60%;
+  font-size: 7vw;
+  width: 80%; }
+
+.info1, .info2 {
+  width: 40vw;
+  margin-left: 3vw;
+  position: relative;
+  font-size: 2.8vw; }
+  .info1 p, .info2 p {
+    margin-bottom: 2vh; }
+
+.info2 {
+  position: relative;
+  margin: 0;
+  width: 100%; }
+  .info2 img {
+    width: 50%;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw; }
+  .info2 p {
+    margin: 0;
+    margin-top: 3vw;
+    float: right;
+    width: 49%; }
+
+.formField {
+  width: 40vw;
+  margin-right: 3vw;
+  position: absolute;
+  right: 0; }
+  .formField form {
+    text-align: center;
+    margin-top: -47vw; }
+    .formField form fieldset {
+      background-color: #1a2127;
+      border-radius: 1vw;
+      border-bottom-left-radius: 15vw;
+      border-bottom-right-radius: 15vw;
+      padding-bottom: 3vw;
+      border: 0.2vw solid #D4AF37; }
+      .formField form fieldset legend {
+        color: #b99f62;
+        background-color: #1a2127;
+        border-top: 0.3vw solid #D4AF37;
+        border-top-left-radius: 2vw;
+        border-top-right-radius: 2vw;
+        width: 70%;
+        text-align: center;
+        font-size: 3vw;
+        margin-bottom: 3vw;
+        padding-top: 1vw; }
+      .formField form fieldset .formLabel {
+        color: #b99f62;
+        text-align: left;
+        position: relative;
+        left: 10%;
+        font-size: 2vw; }
+      .formField form fieldset .formThanks {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #D4AF37;
+        margin-bottom: 1vw; }
+      .formField form fieldset input[type=text], .formField form fieldset select {
+        background-color: #ddd;
+        border: 0.2vw solid #b99f62;
+        border-right: none;
+        border-bottom: none;
+        width: 80%;
+        margin-bottom: 2vw;
+        height: 3vw;
+        font-size: 2vw; }
+      .formField form fieldset input[type=text]:focus {
+        outline-color: #D4AF37; }
+      .formField form fieldset input[type=submit] {
+        font-size: 4vw;
+        font-weight: bold;
+        padding: 1vw 2vw;
+        border-radius: 1vw;
+        transition: border 2s; }
+      .formField form fieldset input[type=submit]:hover {
+        border: 0.2vw solid white; }
+      .formField form fieldset input[type=submit]:active {
+        outline: none;
+        border: 0.2vw solid white;
+        color: white;
+        background-color: rgba(212, 175, 55, 0.2); }
+      .formField form fieldset input[type=submit]:focus {
+        outline: none; }
+      .formField form fieldset .submit {
+        background-color: #D4AF37;
+        border: 0.2vw solid #D4AF37; }
+
+.order {
+  position: relative;
+  width: inherit;
+  margin: 0;
+  margin-bottom: 10vw; }
+  .order form {
+    margin-top: 0;
+    width: 70vw;
+    position: relative;
+    top: 7vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: left; }
+    .order form .formEntry {
+      width: 48%;
+      display: inline-block;
+      position: relative; }
+      .order form .formEntry .orderName {
+        color: #b99f62;
+        font-size: 1.5vw;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: initial;
+        padding: 0.3vw 0.7vw 3.7vw 0.7vw;
+        border-radius: 0.5vw;
+        border-bottom-left-radius: 2vw; }
+      .order form .formEntry input[type=text], .order form .formEntry select {
+        display: inline-block;
+        position: relative;
+        left: 2vw;
+        margin-top: 0.5vw;
+        width: 90%; }
+      .order form .formEntry select:focus {
+        outline-color: #D4AF37; }
+    .order form .formEntry:nth-of-type(3) {
+      width: 98%; }
+      .order form .formEntry:nth-of-type(3) input[type=text] {
+        width: 94%; }
+    .order form .formEntry:nth-of-type(6) {
+      left: 50%;
+      transform: translate(-50%);
+      margin-right: 40vw; }
+    .order form input[type=checkbox] {
+      position: absolute;
+      left: -100vw; }
+    .order form label {
+      position: relative;
+      display: inline-block;
+      width: 17%;
+      padding: 0.5vw;
+      margin-right: 1.7vw;
+      margin-bottom: 1vw;
+      cursor: pointer; }
+    .order form label:last-of-type {
+      margin-bottom: 4vw; }
+    .order form label:hover {
+      box-shadow: 0 0 2vw rgba(0, 0, 0, 0.6); }
+    .order form input:checked + label {
+      background-color: #D4AF37; }
+    .order form .check {
+      position: relative;
+      display: inline-block; }
+      .order form .check .checkName {
+        position: absolute;
+        color: #b99f62;
+        font-size: 1.5vw;
+        top: -0.3vw;
+        left: -0.4vw;
+        background-color: black;
+        padding: 0.1vw 0.5vw;
+        border-top: 0.1vw solid #D4AF37;
+        border-left: 0.1vw solid #D4AF37;
+        border-radius: 0.4vw; }
+      .order form .check .checkPrice {
+        position: absolute;
+        color: #D4AF37;
+        font-size: 2vw;
+        background-color: black;
+        padding: 0.1vw 0.5vw;
+        border-radius: 0.2vw;
+        bottom: 0;
+        right: 0; }
+      .order form .check img {
+        width: 100%;
+        padding: 0.5vw;
+        background-color: black;
+        border-right: 0.1vw solid #b99f62;
+        border-bottom: 0.1vw solid #b99f62; }
+    .order form input[type=submit] {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%); }
+    .order form .formError {
+      left: 2.2vw; }
+    .order form .productError {
+      top: -3.5vw;
+      text-align: center;
+      left: 0; }
+
+.formError {
+  font-size: 1.8vw;
+  position: relative;
+  top: -1.5vw;
+  color: red; }
+
+.products {
+  margin-top: 6vw;
+  position: relative;
+  width: 95%;
+  left: 50%;
+  transform: translate(-50%, 0); }
+
+.product {
+  display: inline-block;
+  position: relative; }
+  .product p {
+    position: absolute;
+    font-size: 3vw;
+    color: #b99f62;
+    background-color: black;
+    padding: 1vw;
+    border-radius: 1vw;
+    border-top: 0.2vw solid #D4AF37;
+    border-left: 0.2vw solid #D4AF37; }
+  .product .price {
+    position: absolute;
+    font-size: 3vw;
+    color: #D4AF37;
+    bottom: 3.5vw;
+    right: 2.5vw; }
+  .product img {
+    padding: 1vw;
+    margin: 1vw;
+    margin-bottom: 3vw;
+    width: 28vw;
+    background-color: black;
+    border: 0.2vw solid #b99f62; }
+
+@media (orientation: portrait) {
+  .products {
+    width: 70%;
+    transform: none;
+    left: 5%; }
+
+  .product p {
+    font-size: 9vw;
+    padding: 1vw 2.5vw;
+    border-radius: 2vw;
+    border-top: 0.6vw solid #D4AF37;
+    border-left: 0.6vw solid #D4AF37;
+    top: -1vw;
+    left: -1vw; }
+  .product .price {
+    font-size: 9vw;
+    bottom: 4.5vw;
+    right: 3.5vw; }
+  .product img {
+    padding: 2vw;
+    width: 67vw;
+    border: 0.6vw solid #b99f62; } }
+.orderSuccess {
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  top: 4vw;
+  padding: 2vw;
+  background-color: #1a2127;
+  border-radius: 1vw;
+  border: 0.2vw solid #D4AF37; }
+  .orderSuccess p {
+    font-size: 4vw;
+    color: #D4AF37;
+    padding: 2vw; }
+  .orderSuccess p:nth-of-type(odd) {
+    font-size: 3vw;
+    color: #b99f62; }
+  .orderSuccess ul {
+    list-style: none; }
+    .orderSuccess ul li {
+      font-size: 4vw;
+      color: #D4AF37; }
+
+.newsHead {
+  text-align: center;
+  font-size: 6vw;
+  color: #D4AF37;
+  padding-top: 4vw;
+  text-shadow: 0.25vw 0.25vw rgba(0, 0, 0, 0.3); }
+
+.newsDate:first-of-type {
+  padding-top: 4vw; }
+
+.newsDate {
+  padding-left: 4vw;
+  font-size: 3.5vw;
+  color: #b99f62; }
+
+.newsStory {
+  width: 70%;
+  padding-left: 8vw;
+  margin-bottom: 3vw;
+  font-size: 2vw; }
+
+.newsStory:last-of-type {
+  margin-bottom: 0; }
+
+.socialPosts {
+  margin: auto;
+  width: 80%;
+  position: relative; }
+  .socialPosts .socialPost:first-of-type {
+    margin-top: 3vw; }
+  .socialPosts .socialPost {
+    position: relative;
+    min-height: 25vw;
+    padding: 2vw 3vw;
+    margin-bottom: 4vw;
+    border: 0.2vw solid #D4AF37;
+    background-color: #1a2127;
+    border-radius: 1vw; }
+    .socialPosts .socialPost .postInfo {
+      position: absolute; }
+      .socialPosts .socialPost .postInfo .socialName {
+        font-size: 2vw;
+        color: #D4AF37; }
+      .socialPosts .socialPost .postInfo img {
+        width: 15vw; }
+      .socialPosts .socialPost .postInfo .socialDate {
+        font-size: 1vw;
+        color: #b99f62; }
+        .socialPosts .socialPost .postInfo .socialDate span {
+          font-size: 1.5vw;
+          color: #D4AF37; }
+    .socialPosts .socialPost .socialText {
+      color: #b99f62;
+      font-size: 2vw;
+      position: relative;
+      left: 30%;
+      width: 70%;
+      top: 2vw;
+      padding-bottom: 2vw; }
+
+.adminForm {
+  width: 31%;
+  position: relative;
+  margin-top: 5vw;
+  margin-left: 2vw;
+  padding: 1.5vw;
+  padding-top: 0.5vw;
+  border-radius: 1vw;
+  display: inline-block;
+  background-color: #1a2127; }
+  .adminForm .adminIDTitle {
+    font-size: 1.3vw;
+    color: #D4AF37;
+    display: inline-block;
+    margin-bottom: 1vw; }
+  .adminForm p {
+    color: #b99f62;
+    font-size: 2vw; }
+  .adminForm .adminUpload {
+    color: #D4AF37;
+    font-size: 2vw;
+    margin-top: 0.5vw;
+    margin-bottom: 2vw; }
+  .adminForm .adminID {
+    border: none;
+    background-color: #1a2127;
+    color: #D4AF37;
+    display: inline-block;
+    width: 4vw;
+    font-size: 1.3vw;
+    margin-left: 0.5vw; }
+  .adminForm .adminContent {
+    overflow: auto;
+    resize: none;
+    width: 100%;
+    font-size: 1.5vw;
+    background-color: #ddd;
+    margin-bottom: 0.7vw; }
+  .adminForm .adminContent:focus {
+    outline-color: #D4AF37; }
+  .adminForm input[type=submit], .adminForm .adminDelete {
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    transition: border 2s;
+    position: relative;
+    display: inline-block; }
+  .adminForm .submit {
+    background-color: #D4AF37;
+    border: 0.2vw solid #D4AF37;
+    margin-left: 6vw; }
+  .adminForm input[type=submit]:hover {
+    border: 0.2vw solid white;
+    color: white; }
+  .adminForm input[type=submit]:active, .adminForm .adminDelete:active {
+    outline: none;
+    border: 0.2vw solid white;
+    color: white;
+    background-color: rgba(212, 175, 55, 0.2); }
+  .adminForm input[type=submit]:focus, .adminForm .adminDelete:focus {
+    outline: none; }
+  .adminForm .adminDelete {
+    background-color: red;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    border: 0.2vw solid white; }
+  .adminForm .adminDelete:hover {
+    border: 0.2vw solid black;
+    color: black; }
+  .adminForm .adminNew {
+    background-color: green;
+    border: 0.2vw solid green;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 2.7vw; }
+
+.adminError {
+  top: 3vw;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%); }
+
+@media (max-width: 1000px) {
+  .adminForm {
+    width: 47%; }
+    .adminForm .adminIDTitle {
+      font-size: 2vw;
+      margin-bottom: 1vw; }
+    .adminForm p {
+      font-size: 2.3vw; }
+    .adminForm .adminUpload {
+      font-size: 2.3vw; }
+    .adminForm .adminID {
+      font-size: 2vw; }
+    .adminForm .adminContent {
+      font-size: 2vw; }
+    .adminForm input[type=submit], .adminForm .adminDelete {
+      font-size: 2.8vw;
+      padding: 0.7vw 1.5vw; }
+    .adminForm .submit {
+      margin-left: 12vw; } }
+@media (orientation: portrait) {
+  .adminForm {
+    width: 75%; }
+    .adminForm .adminIDTitle {
+      font-size: 4vw;
+      margin-bottom: 1vw; }
+    .adminForm p {
+      font-size: 5.3vw; }
+    .adminForm .adminUpload {
+      font-size: 5.3vw; }
+    .adminForm .adminID {
+      font-size: 4vw; }
+    .adminForm .adminContent {
+      font-size: 5.5vw; }
+    .adminForm input[type=submit], .adminForm .adminDelete {
+      font-size: 5.5vw;
+      padding: 1vw 2.5vw; }
+    .adminForm .submit {
+      margin-left: 10vw; }
+    .adminForm .adminDelete, .adminForm .submit {
+      margin-top: 3vw; } }
+.footNav {
+  position: absolute;
+  bottom: 0;
+  display: none; }
+
+.copy {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  background-color: #1a2127;
+  color: #b99f62;
+  font-size: 2vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  width: 25%;
+  border-top-left-radius: 3vw;
+  border-top-right-radius: 3vw;
+  padding-top: 0.4vw; }
+
+@media (orientation: portrait) {
+  .copy {
+    font-size: 6vw;
+    width: 55%;
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    padding-top: 1vw; } }
+
+/*# sourceMappingURL=final_project.css.map */
